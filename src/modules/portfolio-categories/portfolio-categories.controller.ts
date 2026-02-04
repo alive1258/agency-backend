@@ -26,8 +26,6 @@ import { JwtOrApiKeyGuard } from 'src/auth/guards/jwt-or-api-key.guard';
 import { RequirePermissions } from 'src/auth/decorators/permissions.decorator';
 import { PermissionsGuard } from 'src/auth/guards/permissions.guard';
 import { Permission } from 'src/auth/enums/permission-type.enum';
-import { Roles } from 'src/auth/decorators/roles.decorator';
-import { Role } from 'src/auth/enums/role-type.enum';
 
 @Controller('portfolio-categories')
 export class PortfolioCategoriesController {
@@ -87,7 +85,6 @@ export class PortfolioCategoriesController {
     response: PortfolioCategoryResponseDto,
     status: HttpStatus.OK,
   })
-  @Roles(Role.ADMIN, Role.SUPER_ADMIN)
   @RequirePermissions(Permission.PORTFOLIO_CATEGORY_UPDATE)
   @UseGuards(JwtOrApiKeyGuard, PermissionsGuard)
   @Patch(':id')
