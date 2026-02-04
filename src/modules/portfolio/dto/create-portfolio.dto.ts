@@ -26,7 +26,7 @@ export class CreatePortfolioDto {
     example: '8a3f0f7b-6d59-4db4-bdc1-2b45a9c9c5a1',
   })
   @IsUUID()
-  blog_category_id: string;
+  portfolio_category_id: string;
 
   /** Description */
   @ApiProperty({
@@ -66,7 +66,7 @@ export class PortfolioResponseDto {
   title: string;
 
   @ApiProperty({ description: 'Category UUID' })
-  blog_category_id: string;
+  portfolio_category_id: string;
 
   @ApiProperty({ description: 'Portfolio description' })
   description: string;

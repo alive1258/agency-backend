@@ -12,6 +12,7 @@ import {
   UploadedFile,
   UseInterceptors,
   ParseUUIDPipe,
+  Query,
 } from '@nestjs/common';
 import type { Request } from 'express';
 
@@ -27,6 +28,7 @@ import { Permission } from 'src/auth/enums/permission-type.enum';
 
 import { FileInterceptor } from '@nestjs/platform-express';
 import { Throttle } from '@nestjs/throttler';
+import { GetPortfolioDto } from './dto/get-portfolio.dto';
 
 @Controller('portfolio')
 export class PortfolioController {
@@ -56,8 +58,8 @@ export class PortfolioController {
     status: HttpStatus.OK,
   })
   @Get()
-  findAll() {
-    return this.portfolioService.findAll();
+  findAll(@Query() query: GetPortfolioDto) {
+    return this.portfolioService.findAll(query);
   }
 
   @ApiDoc({
