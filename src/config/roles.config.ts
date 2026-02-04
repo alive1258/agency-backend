@@ -176,6 +176,12 @@ export const RoleBasedPermissions: Record<Role, Permission[]> = {
     Permission.WHO_WE_ARE_UPDATE,
     Permission.WHO_WE_ARE_DELETE,
     Permission.WHO_WE_ARE_MANAGE,
+
+    Permission.WHO_WE_ARE_FEATURE_CREATE,
+    Permission.WHO_WE_ARE_FEATURE_READ,
+    Permission.WHO_WE_ARE_FEATURE_UPDATE,
+    Permission.WHO_WE_ARE_FEATURE_DELETE,
+    Permission.WHO_WE_ARE_FEATURE_MANAGE,
   ],
 
   [Role.MANAGER]: [

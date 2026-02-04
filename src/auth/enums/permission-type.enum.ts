@@ -36,6 +36,12 @@ export enum Permission {
   WHO_WE_ARE_UPDATE = 'who-we-are:update',
   WHO_WE_ARE_DELETE = 'who-we-are:delete',
   WHO_WE_ARE_MANAGE = 'who-we-are:*',
+
+  WHO_WE_ARE_FEATURE_CREATE = 'who-we-are-features:create',
+  WHO_WE_ARE_FEATURE_READ = 'who-we-are-features:read',
+  WHO_WE_ARE_FEATURE_UPDATE = 'who-we-are-features:update',
+  WHO_WE_ARE_FEATURE_DELETE = 'who-we-are-features:delete',
+  WHO_WE_ARE_FEATURE_MANAGE = 'who-we-are-features:*',
   /* =========================
        Question Answer Management
    ========================= */
