@@ -172,6 +172,13 @@ export enum Permission {
   PRODUCT_REVIEW = 'product:review',
   PRODUCT_MANAGE = 'product:*',
 
+  BLOGS_CREATE = 'blogs:create',
+  BLOGS_READ = 'blogs:read',
+  BLOGS_UPDATE = 'blogs:update',
+  BLOGS_DELETE = 'blogs:delete',
+  BLOGS_REVIEW = 'blogs:review',
+  BLOGS_MANAGE = 'blogs:*',
+
   /* =========================
      Profile
   ========================= */
