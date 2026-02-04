@@ -115,6 +115,12 @@ export const RoleBasedPermissions: Record<Role, Permission[]> = {
     Permission.BLOG_DETAILS_REVIEW,
     Permission.BLOG_DETAILS_MANAGE,
 
+    Permission.PORTFOLIO_CATEGORY_CREATE,
+    Permission.PORTFOLIO_CATEGORY_READ,
+    Permission.PORTFOLIO_CATEGORY_UPDATE,
+    Permission.PORTFOLIO_CATEGORY_DELETE,
+    Permission.PORTFOLIO_CATEGORY_MANAGE,
+
     Permission.PROFILE_READ,
     Permission.PROFILE_UPDATE,
 
