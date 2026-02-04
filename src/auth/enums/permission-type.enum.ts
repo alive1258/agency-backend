@@ -192,6 +192,12 @@ export enum Permission {
   PORTFOLIO_CATEGORY_DELETE = 'portfolio-category:delete',
   PORTFOLIO_CATEGORY_MANAGE = 'portfolio-category:*',
 
+  PORTFOLIO_DELETE = 'portfolio:delete',
+  PORTFOLIO_CREATE = 'portfolio:create',
+  PORTFOLIO_READ = 'portfolio:read',
+  PORTFOLIO_UPDATE = 'portfolio:update',
+  PORTFOLIO_MANAGE = 'portfolio:*',
+
   /* =========================
      Profile
   ========================= */

@@ -74,13 +74,13 @@ export class ServiceResponseDto {
   @ApiProperty({ description: 'Service UUID' })
   id: string;
 
-  @ApiProperty({ description: 'Service name' })
-  name: string;
+  @ApiProperty({ description: 'Blog title' })
+  title: string;
 
   @ApiProperty({ description: 'Category UUID' })
   blog_category_id: string;
 
-  @ApiProperty({ description: 'Service description' })
+  @ApiProperty({ description: 'Blog description' })
   description: string;
 
   @ApiProperty({ description: 'Key features', required: false })

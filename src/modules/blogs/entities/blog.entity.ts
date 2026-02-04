@@ -1,7 +1,6 @@
-import { BusinessWeCover } from 'src/modules/business-we-cover/entities/business-we-cover.entity';
-import { Category } from 'src/modules/categories/entities/category.entity';
+import { BlogCategory } from 'src/modules/blog-categories/entities/blog-category.entity';
 import { User } from 'src/modules/users/entities/user.entity';
-import { WhyChooseUs } from 'src/modules/why-choose-us/entities/why-choose-us.entity';
+
 import {
   Column,
   CreateDateColumn,
@@ -10,7 +9,6 @@ import {
   Index,
   JoinColumn,
   ManyToOne,
-  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -47,9 +45,9 @@ export class Blog {
   @Column({ type: 'uuid', nullable: false })
   blog_category_id: string;
 
-  @ManyToOne(() => Category, { nullable: false, onDelete: 'RESTRICT' })
+  @ManyToOne(() => BlogCategory, { nullable: false, onDelete: 'RESTRICT' })
   @JoinColumn({ name: 'blog_category_id' })
-  blog_category: Category;
+  blog_category: BlogCategory;
 
   //   @OneToMany(() => WhyChooseUs, (log) => log.blog, {
   //     cascade: true,
