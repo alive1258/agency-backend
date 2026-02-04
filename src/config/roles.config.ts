@@ -144,9 +144,14 @@ export const RoleBasedPermissions: Record<Role, Permission[]> = {
     Permission.SERVICE_VIDEO_READ,
     Permission.SERVICE_VIDEO_MANAGE,
 
-
     Permission.SERVICE_REVIEW_DELETE,
     Permission.SERVICE_REVIEW_MANAGE,
+
+    Permission.TRUSTED_COMPANIES_CREATE,
+    Permission.TRUSTED_COMPANIES_READ,
+    Permission.TRUSTED_COMPANIES_UPDATE,
+    Permission.TRUSTED_COMPANIES_DELETE,
+    Permission.TRUSTED_COMPANIES_MANAGE,
   ],
 
   [Role.MANAGER]: [

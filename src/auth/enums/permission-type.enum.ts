@@ -9,6 +9,13 @@ export enum Permission {
   USER_DELETE = 'user:delete',
   USER_MANAGE = 'user:*',
 
+  //   TRUSTED_COMPANIES_CREATE
+  TRUSTED_COMPANIES_CREATE = 'trusted-companies:create',
+  TRUSTED_COMPANIES_READ = 'trusted-companies:read',
+  TRUSTED_COMPANIES_UPDATE = 'trusted-companies:update',
+  TRUSTED_COMPANIES_DELETE = 'trusted-companies:delete',
+  TRUSTED_COMPANIES_MANAGE = 'trusted-companies:*',
+
   /* =========================
      Content Management
   ========================= */

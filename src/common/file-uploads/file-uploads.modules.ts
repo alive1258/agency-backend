@@ -4,10 +4,12 @@ import { FileUploadsProvider } from './providers/create-file-uploads.providers';
 import { UpdateFileUploadsProvider } from './providers/update-file-uploads.providers';
 import { DeleteFileUploadsProvider } from './providers/delate-file-uploads.providers';
 import { HttpModule } from '@nestjs/axios';
+import { CloudinaryProvider } from 'src/config/cloudinary.provider';
 
 @Global()
 @Module({
   providers: [
+    CloudinaryProvider,
     FileUploadsService,
     FileUploadsProvider,
     UpdateFileUploadsProvider,

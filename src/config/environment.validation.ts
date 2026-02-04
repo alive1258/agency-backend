@@ -22,5 +22,5 @@ export default Joi.object({
   MAIL_SECURE: Joi.string().required(),
   SMTP_USERNAME: Joi.string().required(),
   SMTP_PASSWORD: Joi.string().required(),
-  IMAGE_UPLOAD_URL: Joi.string().required(),
+  // IMAGE_UPLOAD_URL: Joi.string().required(),
 });
