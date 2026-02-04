@@ -186,6 +186,13 @@ export enum Permission {
   BLOG_DETAILS_REVIEW = 'blog-details:review',
   BLOG_DETAILS_MANAGE = 'blog-details:*',
 
+  PORTFOLIO_DETAILS_CREATE = 'portfolio-details:create',
+  PORTFOLIO_DETAILS_READ = 'portfolio-details:read',
+  PORTFOLIO_DETAILS_UPDATE = 'portfolio-details:update',
+  PORTFOLIO_DETAILS_DELETE = 'portfolio-details:delete',
+  PORTFOLIO_DETAILS_REVIEW = 'portfolio-details:review',
+  PORTFOLIO_DETAILS_MANAGE = 'portfolio-details:*',
+
   PORTFOLIO_CATEGORY_CREATE = 'portfolio-category:create',
   PORTFOLIO_CATEGORY_READ = 'portfolio-category:read',
   PORTFOLIO_CATEGORY_UPDATE = 'portfolio-category:update',

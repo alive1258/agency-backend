@@ -1,4 +1,5 @@
 import { Blog } from 'src/modules/blogs/entities/blog.entity';
+import { Portfolio } from 'src/modules/portfolio/entities/portfolio.entity';
 import { User } from 'src/modules/users/entities/user.entity';
 import {
   Column,
@@ -30,11 +31,11 @@ export class PortfolioDetail {
   addedBy: User;
 
   @Column({ type: 'uuid', nullable: false })
-  blog_id: string;
+  portfolio_id: string;
 
-  @ManyToOne(() => Blog, { nullable: false, onDelete: 'RESTRICT' })
-  @JoinColumn({ name: 'blog_id' })
-  blog: Blog;
+  @ManyToOne(() => Portfolio, { nullable: false, onDelete: 'RESTRICT' })
+  @JoinColumn({ name: 'portfolio_id' })
+  portfolio: Portfolio;
 
   @Column({ type: 'text', nullable: false })
   description: string;
