@@ -67,6 +67,14 @@ export enum Permission {
   CATEGORY_UPDATE = 'category:update',
   CATEGORY_DELETE = 'category:delete',
   CATEGORY_MANAGE = 'category:*',
+  /* =========================
+     CATEGORY Management
+  ========================= */
+  BLOG_CATEGORY_CREATE = 'blog-category:create',
+  BLOG_CATEGORY_READ = 'blog-category:read',
+  BLOG_CATEGORY_UPDATE = 'blog-category:update',
+  BLOG_CATEGORY_DELETE = 'blog-category:delete',
+  BLOG_CATEGORY_MANAGE = 'category:*',
 
   /* =========================
      BusinessWeCover Management
