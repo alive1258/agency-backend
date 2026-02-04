@@ -46,6 +46,9 @@ import { QuestionAnswersModule } from './modules/question-answers/question-answe
 import { TeamsModule } from './modules/teams/teams.module';
 import { WhoWeAreModule } from './modules/who-we-are/who-we-are.module';
 import { WhoWeAreFeaturesModule } from './modules/who-we-are-features/who-we-are-features.module';
+import { BlogCategoriesModule } from './modules/blog-categories/blog-categories.module';
+import { BlogsModule } from './modules/blogs/blogs.module';
+import { BlogDetailsModule } from './modules/blog-details/blog-details.module';
 
 const ENV = process.env.NODE_ENV;
 
@@ -120,6 +123,9 @@ const ENV = process.env.NODE_ENV;
     TeamsModule,
     WhoWeAreModule,
     WhoWeAreFeaturesModule,
+    BlogCategoriesModule,
+    BlogsModule,
+    BlogDetailsModule,
   ],
 
   controllers: [AppController],

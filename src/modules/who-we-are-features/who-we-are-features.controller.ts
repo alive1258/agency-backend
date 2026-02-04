@@ -25,7 +25,6 @@ import { JwtOrApiKeyGuard } from 'src/auth/guards/jwt-or-api-key.guard';
 import { PermissionsGuard } from 'src/auth/guards/permissions.guard';
 import { RequirePermissions } from 'src/auth/decorators/permissions.decorator';
 import { Permission } from 'src/auth/enums/permission-type.enum';
-import { FileInterceptor } from '@nestjs/platform-express';
 import { Throttle } from '@nestjs/throttler';
 import type { Request } from 'express';
 
@@ -44,19 +43,13 @@ export class WhoWeAreFeaturesController {
   })
   @RequirePermissions(Permission.WHO_WE_ARE_FEATURE_CREATE)
   @UseGuards(JwtOrApiKeyGuard, PermissionsGuard)
-  @UseInterceptors(FileInterceptor('image'))
   @Throttle({ default: { limit: 20, ttl: 180 } })
   @Post('create')
   create(
     @Req() req: Request,
     @Body() createWhoWeAreFeatureDto: CreateWhoWeAreFeatureDto,
-    @UploadedFile() file?: Express.Multer.File,
   ) {
-    return this.whoWeAreFeaturesService.create(
-      req,
-      createWhoWeAreFeatureDto,
-      file,
-    );
+    return this.whoWeAreFeaturesService.create(req, createWhoWeAreFeatureDto);
   }
 
   @ApiDoc({
@@ -92,19 +85,13 @@ export class WhoWeAreFeaturesController {
   })
   @RequirePermissions(Permission.WHO_WE_ARE_FEATURE_UPDATE)
   @UseGuards(JwtOrApiKeyGuard, PermissionsGuard)
-  @UseInterceptors(FileInterceptor('image'))
   @Throttle({ default: { limit: 20, ttl: 180 } })
   @Patch(':id')
   update(
     @Param('id', ParseUUIDPipe) id: string,
     @Body() updateWhoWeAreFeatureDto: UpdateWhoWeAreFeatureDto,
-    @UploadedFile() file?: Express.Multer.File,
   ) {
-    return this.whoWeAreFeaturesService.update(
-      id,
-      updateWhoWeAreFeatureDto,
-      file,
-    );
+    return this.whoWeAreFeaturesService.update(id, updateWhoWeAreFeatureDto);
   }
 
   @ApiDoc({
