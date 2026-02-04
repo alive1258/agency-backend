@@ -17,6 +17,15 @@ export enum Permission {
   TRUSTED_COMPANIES_MANAGE = 'trusted-companies:*',
 
   /* =========================
+       Our Work Process Management
+   ========================= */
+  OUR_WORK_PROCESSES_CREATE = 'our-work-processes:create',
+  OUR_WORK_PROCESSES_READ = 'our-work-processes:read',
+  OUR_WORK_PROCESSES_UPDATE = 'our-work-processes:update',
+  OUR_WORK_PROCESSES_DELETE = 'our-work-processes:delete',
+  OUR_WORK_PROCESSES_MANAGE = 'our-work-processes:*',
+
+  /* =========================
      Content Management
   ========================= */
   CONTENT_CREATE = 'content:create',
