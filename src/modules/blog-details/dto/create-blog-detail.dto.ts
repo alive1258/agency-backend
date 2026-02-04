@@ -53,17 +53,17 @@ export class CreateBlogDetailDto {
   image?: string;
 }
 
-export class ServiceResponseDto {
-  @ApiProperty({ description: 'Service UUID' })
+export class BlogDetailResponseDto {
+  @ApiProperty({ description: 'Blog Detail UUID' })
   id: string;
 
-  @ApiProperty({ description: 'Service name' })
-  name: string;
+  @ApiProperty({ description: 'Blog Detail title' })
+  title: string;
 
   @ApiProperty({ description: 'Category UUID' })
   blog_id: string;
 
-  @ApiProperty({ description: 'Service description' })
+  @ApiProperty({ description: 'Blog Detail description' })
   description: string;
 
   @ApiProperty({ description: 'Key features', required: false })
