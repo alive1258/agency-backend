@@ -30,6 +30,12 @@ export enum Permission {
   TEAM_UPDATE = 'team:update',
   TEAM_DELETE = 'team:delete',
   TEAM_MANAGE = 'team:*',
+
+  WHO_WE_ARE_CREATE = 'who-we-are:create',
+  WHO_WE_ARE_READ = 'who-we-are:read',
+  WHO_WE_ARE_UPDATE = 'who-we-are:update',
+  WHO_WE_ARE_DELETE = 'who-we-are:delete',
+  WHO_WE_ARE_MANAGE = 'who-we-are:*',
   /* =========================
        Question Answer Management
    ========================= */

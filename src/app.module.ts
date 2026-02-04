@@ -44,6 +44,8 @@ import { ServiceReviewsModule } from './modules/service-reviews/service-reviews.
 import { OurWorkProcessModule } from './modules/our-work-process/our-work-process.module';
 import { QuestionAnswersModule } from './modules/question-answers/question-answers.module';
 import { TeamsModule } from './modules/teams/teams.module';
+import { WhoWeAreModule } from './modules/who-we-are/who-we-are.module';
+import { WhoWeAreFeaturesModule } from './modules/who-we-are-features/who-we-are-features.module';
 
 const ENV = process.env.NODE_ENV;
 
@@ -116,6 +118,8 @@ const ENV = process.env.NODE_ENV;
     OurWorkProcessModule,
     QuestionAnswersModule,
     TeamsModule,
+    WhoWeAreModule,
+    WhoWeAreFeaturesModule,
   ],
 
   controllers: [AppController],

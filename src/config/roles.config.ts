@@ -170,6 +170,12 @@ export const RoleBasedPermissions: Record<Role, Permission[]> = {
     Permission.TEAM_UPDATE,
     Permission.TEAM_DELETE,
     Permission.TEAM_MANAGE,
+
+    Permission.WHO_WE_ARE_CREATE,
+    Permission.WHO_WE_ARE_READ,
+    Permission.WHO_WE_ARE_UPDATE,
+    Permission.WHO_WE_ARE_DELETE,
+    Permission.WHO_WE_ARE_MANAGE,
   ],
 
   [Role.MANAGER]: [
