@@ -1,4 +1,3 @@
-import { Service } from 'src/modules/services/entities/service.entity';
 import { User } from 'src/modules/users/entities/user.entity';
 
 import {
@@ -27,16 +26,11 @@ export class WhyChooseUs {
    */
   @Column({ type: 'varchar', nullable: false })
   headline: string;
-
   /**
-   * Relation to Service
+   * Headline text
    */
-  @Column({ type: 'uuid', nullable: false })
-  service_id: string;
-
-  @ManyToOne(() => Service, { nullable: false })
-  @JoinColumn({ name: 'service_id' })
-  service: Service;
+  @Column({ type: 'varchar', nullable: false })
+  description: string;
 
   /**
    * Is the record active (for soft delete or deactivation)

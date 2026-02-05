@@ -52,6 +52,9 @@ import { BlogDetailsModule } from './modules/blog-details/blog-details.module';
 import { PortfolioCategoriesModule } from './modules/portfolio-categories/portfolio-categories.module';
 import { PortfolioModule } from './modules/portfolio/portfolio.module';
 import { PortfolioDetailsModule } from './modules/portfolio-details/portfolio-details.module';
+import { ServiceWorkGalleriesModule } from './modules/service-work-galleries/service-work-galleries.module';
+import { ServiceFaqsModule } from './modules/service-faqs/service-faqs.module';
+import { ServiceWorkFlowsModule } from './modules/service-work-flows/service-work-flows.module';
 
 const ENV = process.env.NODE_ENV;
 
@@ -132,6 +135,9 @@ const ENV = process.env.NODE_ENV;
     PortfolioCategoriesModule,
     PortfolioModule,
     PortfolioDetailsModule,
+    ServiceWorkGalleriesModule,
+    ServiceFaqsModule,
+    ServiceWorkFlowsModule,
   ],
 
   controllers: [AppController],

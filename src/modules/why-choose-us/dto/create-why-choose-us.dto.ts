@@ -12,13 +12,16 @@ export class CreateWhyChooseUsDto {
     message: 'Headline can contain a maximum of 150 characters.',
   })
   headline: string;
-
   @ApiProperty({
-    description: 'ID of the associated service',
-    example: '8a3f0f7b-6d59-4db4-bdc1-2b45a9c9c5a1',
+    description: 'Headline text for Why Choose Us section.',
+    example: 'Trusted by Thousands of Clients',
+    maxLength: 150,
   })
-  @IsUUID('4', { message: 'service_id must be a valid UUID' })
-  service_id: string;
+  @IsString({ message: 'Headline must be a string.' })
+  @MaxLength(150, {
+    message: 'Headline can contain a maximum of 150 characters.',
+  })
+  description: string;
 }
 
 export class WhyChooseUsResponseDto {
@@ -33,12 +36,11 @@ export class WhyChooseUsResponseDto {
     description: 'Headline text',
   })
   headline: string;
-
   @ApiProperty({
-    example: '8a3f0f7b-6d59-4db4-bdc1-2b45a9c9c5a1',
-    description: 'ID of the associated service',
+    example: 'Trusted by Thousands of Clients',
+    description: 'Headline text',
   })
-  service_id: string;
+  description: string;
 
   @ApiProperty({
     example: true,
