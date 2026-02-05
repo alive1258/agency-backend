@@ -205,6 +205,12 @@ export enum Permission {
   PORTFOLIO_UPDATE = 'portfolio:update',
   PORTFOLIO_MANAGE = 'portfolio:*',
 
+  SERVICE_FAQ_CREATE = 'service-faq:create',
+  SERVICE_FAQ_READ = 'service-faq:read',
+  SERVICE_FAQ_UPDATE = 'service-faq:update',
+  SERVICE_FAQ_DELETE = 'service-faq:delete',
+  SERVICE_FAQ_MANAGE = 'service-faq:manage',
+
   /* =========================
      Profile
   ========================= */
