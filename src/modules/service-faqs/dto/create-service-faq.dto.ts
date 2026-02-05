@@ -41,10 +41,10 @@ export class CreateServiceFaqDto {
   answer?: string;
 }
 
-export class QuestionAnswerResponseDto {
+export class ServiceFaqResponseDto {
   @ApiProperty({
     example: '8a3f0f7b-6d59-4db4-bdc1-2b45a9c9c5a1',
-    description: 'Unique identifier for the question answer record',
+    description: 'Unique identifier for the service FAQ record',
   })
   id: string;
 
