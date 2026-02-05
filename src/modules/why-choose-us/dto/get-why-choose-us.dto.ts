@@ -11,6 +11,14 @@ class GetWhyChooseUsBaseDto {
   @IsOptional()
   @IsString({ message: 'Headline must be a string.' })
   headline?: string;
+  @ApiPropertyOptional({
+    description:
+      'Filter Why Choose Us records by headline (partial match supported).',
+    example: 'Trusted',
+  })
+  @IsOptional()
+  @IsString({ message: 'Description must be a string.' })
+  description?: string;
 
   @ApiPropertyOptional({
     description: 'Filter by active status',
