@@ -1,3 +1,4 @@
+import { Service } from 'src/modules/services/entities/service.entity';
 import { User } from 'src/modules/users/entities/user.entity';
 
 import {
@@ -47,6 +48,16 @@ export class WhyChooseUs {
   @ManyToOne(() => User, { nullable: false })
   @JoinColumn({ name: 'added_by' })
   addedBy: User;
+
+  /**
+   * Related service ID
+   */
+  @Column({ type: 'uuid', nullable: false })
+  service_id: string;
+
+  @ManyToOne(() => Service, { nullable: false })
+  @JoinColumn({ name: 'service_id' })
+  service: Service;
 
   /**
    * Timestamp when the record was created

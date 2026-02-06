@@ -62,71 +62,64 @@ export class WhyChooseUsService {
     return await this.whyChooseUsRepository.save(newWhyChooseUs);
   }
 
-async findAll(query: GetWhyChooseUsDto) {
-  const queryBuilder = this.whyChooseUsRepository.createQueryBuilder('whyChooseUs');
+  async findAll(query: GetWhyChooseUsDto) {
+    const queryBuilder =
+      this.whyChooseUsRepository.createQueryBuilder('whyChooseUs');
 
-  queryBuilder
-    // 1. Select main table fields (including foreign keys)
-    .select([
-      'whyChooseUs.id',
-      'whyChooseUs.headline',
-      'whyChooseUs.service_id', // Important for mapping
-      'whyChooseUs.added_by',   // Important for mapping
-      'whyChooseUs.is_active',
-      'whyChooseUs.created_at',
-      'whyChooseUs.updated_at',
-    ])
-    // 2. Join and Select Service (id and name)
-    .leftJoin('whyChooseUs.service', 'service')
-    .addSelect([
-      'service.id', 
-      'service.name'
-    ])
-    // 3. Join and Select AddedBy (id, name, role)
-    .leftJoin('whyChooseUs.addedBy', 'addedBy')
-    .addSelect([
-      'addedBy.id',
-      'addedBy.name',
-   
-    ])
-    .orderBy('whyChooseUs.created_at', 'DESC');
-  // or manually add .skip() and .take() here.
-  return await queryBuilder.getMany();
-}
-
-async findOne(id: string): Promise<WhyChooseUsResponseDto> {
-  const record = await this.whyChooseUsRepository.findOne({
-    where: { id },
-    withDeleted: true, // Keeping your soft-delete requirement
-    relations: ['service', 'addedBy'],
-    select: {
-      id: true,
-      headline: true,   // matches WhyChooseUs schema
-      service_id: true,
-      added_by: true,
-      is_active: true,
-      created_at: true,
-      updated_at: true,
-      // Select specific fields for Service
-      service: {
-        id: true,
-        name: true,
-      },
-      // Select specific fields for AddedBy
-      addedBy: {
-        id: true,
-        name: true,
-    
-      },
-    },
-  });
-
-  if (!record) {
-    throw new BadRequestException('Why Choose Us record not found');
+    queryBuilder
+      // 1. Select main table fields (including foreign keys)
+      .select([
+        'whyChooseUs.id',
+        'whyChooseUs.headline',
+        'whyChooseUs.service_id', // Important for mapping
+        'whyChooseUs.added_by', // Important for mapping
+        'whyChooseUs.is_active',
+        'whyChooseUs.created_at',
+        'whyChooseUs.updated_at',
+      ])
+      // 2. Join and Select Service (id and name)
+      .leftJoin('whyChooseUs.service', 'service')
+      .addSelect(['service.id', 'service.name'])
+      // 3. Join and Select AddedBy (id, name, role)
+      .leftJoin('whyChooseUs.addedBy', 'addedBy')
+      .addSelect(['addedBy.id', 'addedBy.name'])
+      .orderBy('whyChooseUs.created_at', 'DESC');
+    // or manually add .skip() and .take() here.
+    return await queryBuilder.getMany();
   }
 
-  return record as unknown as WhyChooseUsResponseDto;
-}
+  async findOne(id: string): Promise<WhyChooseUsResponseDto> {
+    const record = await this.whyChooseUsRepository.findOne({
+      where: { id },
+      withDeleted: true, // Keeping your soft-delete requirement
+      relations: ['service', 'addedBy'],
+      select: {
+        id: true,
+        headline: true, // matches WhyChooseUs schema
+        service_id: true,
+        added_by: true,
+        is_active: true,
+        created_at: true,
+        updated_at: true,
+        // Select specific fields for Service
+        service: {
+          id: true,
+          name: true,
+        },
+        // Select specific fields for AddedBy
+        addedBy: {
+          id: true,
+          name: true,
+        },
+      },
+    });
+
+    if (!record) {
+      throw new BadRequestException('Why Choose Us record not found');
+    }
+
+    return record as unknown as WhyChooseUsResponseDto;
+  }
 
   async update(
     id: string,
