@@ -1,4 +1,4 @@
-<p align="center"> <a href="https://nestjs.com/" target="_blank"> <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo" /> </a> </p> <h1 align="center">Digital Product Selling Backend API</h1> <p align="center"> A scalable, secure, and production-ready REST API for a digital product-selling platform built with <a href="https://nestjs.com" target="_blank">NestJS</a>. </p> <p align="center"> 🔗 <b>Live API:</b> https://digital-product-selling-production.up.railway.app/api/v1 </p> <p align="center"> 📘 <b>Swagger API Docs:</b> https://digital-product-selling-production.up.railway.app/api/v1/swagger </p>
+<p align="center"> <a href="https://nestjs.com/" target="_blank"> <img src="https://nestjs.com/img/logo-small.svg" width="120" alt="NestJS Logo" /> </a> </p> <h1 align="center">Digital Product Selling Backend API</h1> <p align="center"> A scalable, secure, and production-ready REST API for a digital product-selling platform built with <a href="https://nestjs.com" target="_blank">NestJS</a>. </p> <p align="center"> 🔗 <b>Live API:</b> https://agency-website-nest-js-backend.onrender.com/api/v1 </p> <p align="center"> 📘 <b>Swagger API Docs:</b> https://agency-website-nest-js-backend.onrender.com/api/v1/swagger </p>
 </p>
 
 ---
@@ -160,7 +160,7 @@ bun run test:cov
 Once the server is running, access Swagger UI at:
 
 ```
-http://localhost:3000/api/docs
+http://localhost:5000/api/v1/swagger
 ```
 
 ---
